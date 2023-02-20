@@ -33,7 +33,7 @@ class Matrix {
                 "пробелом - a11 a12 a13 ... a1n b1:"
              << endl;
 
-        int value;
+        double value;
         for (int i = 0; i < n; i++) {
             vector<double> a_row;
             for (int j = 0; j < n; j++) {
@@ -58,7 +58,7 @@ class Matrix {
         getline(*fstream, line);
         n = stoi(line);
 
-        int value;
+        double value;
         for (int i = 0; i < n; i++) {
             getline(*fstream, line);
             vector<double> a_row;
@@ -96,8 +96,8 @@ class Matrix {
         set<int> biggest_set;
         bool found_strict = false;
         for (int i = 0; i < n; i++) {
-            int sum = 0;
-            for (int element : a[i]) sum += element;
+            double sum = 0;
+            for (double element : a[i]) sum += element;
 
             for (int j = 0; j < n; j++) {
                 if (2 * a[i][j] >= sum) {
